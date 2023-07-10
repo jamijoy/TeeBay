@@ -13,4 +13,13 @@ class UserController extends Controller
         $data = User::all();
         return(compact('data'));
     }
+
+    public function login(){
+        $data = [
+            'message' => 'success'
+        ];
+        return(compact('data'));
+    }
+
+
 }

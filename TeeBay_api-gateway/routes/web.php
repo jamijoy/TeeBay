@@ -21,3 +21,4 @@ use Illuminate\Support\Facades\Auth;
 
 Route:: get('/', 'App\Http\Controllers\Home\HomeController@index');
 Route:: get('/users', 'App\Http\Controllers\User\UserController@index');
+Route:: post('/login', 'App\Http\Controllers\User\UserController@login');
