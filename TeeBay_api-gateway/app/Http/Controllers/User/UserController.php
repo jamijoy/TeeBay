@@ -29,6 +29,7 @@ class UserController extends Controller
         $token = $user->createToken('auth_token')->plainTextToken;
 
         return response()->json([
+            'message' => 'success',
             'access_token' => $token,
             'token_type' => 'Bearer',
             'user_details' => $request->user(),
@@ -43,7 +44,7 @@ class UserController extends Controller
         $validator = Validator::make($request->all(), [
             'name' => 'required|string|max:255',
             'email' => 'required|email|unique:users|max:255',
-            'password' => 'required|min:10',
+            'password' => 'required|min:3',
         ]);
         // Return errors if validation error occur.
         if ($validator->fails()) {
@@ -62,6 +63,7 @@ class UserController extends Controller
             $token = $user->createToken('auth_token')->plainTextToken;
 
             return response()->json([
+                'message' => 'success',
                 'access_token' => $token,
                 'token_type' => 'Bearer',
             ]);
