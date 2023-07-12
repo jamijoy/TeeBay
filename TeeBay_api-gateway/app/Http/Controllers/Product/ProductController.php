@@ -45,16 +45,29 @@ class ProductController extends Controller
      */
     public function showAll()
     {
-        $products = DB::table('products')->get();
+        $products = DB::table('products')
+                    ->orderBy('id')
+                    ->get();
         return(compact('products'));
     }
 
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(string $id)
+    public function edit(Request $request)
     {
-        //
+        $effected_count = DB::table('products')
+            ->where('id', $request->id)
+            ->decrement('quantity');
+
+        if ($effected_count==1){
+            $message = 'success';
+        }else{
+            $message = 'error';
+        }
+        return response()->json([
+            'message' => $message
+        ]);
     }
 
     /**
@@ -68,8 +81,19 @@ class ProductController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(string $id)
+    public function destroy(Request $request)
     {
-        //
+        $effected_count = DB::table('products')
+                            ->where('id', $request->id)
+                            ->delete();
+
+        if ($effected_count==1){
+            $message = 'success';
+        }else{
+            $message = 'error';
+        }
+        return response()->json([
+            'message' => $message
+        ]);
     }
 }

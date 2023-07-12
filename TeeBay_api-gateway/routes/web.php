@@ -26,3 +26,4 @@ Route:: post('/register', 'App\Http\Controllers\User\UserController@register');
 
 Route:: get('/users', 'App\Http\Controllers\User\UserController@index');
 Route:: get('/products', 'App\Http\Controllers\Product\ProductController@showAll');
+Route:: get('/buyProduct/{id}', 'App\Http\Controllers\Product\ProductController@edit');
