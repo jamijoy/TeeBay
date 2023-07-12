@@ -22,7 +22,8 @@ Database to setup
 ......................................................................................................
 
 Database Type: Postgre SQL
-Database name: teebay
+Database Name: teebay
+Database Backup Directory: TeeBay\TeeBay_other-docs\db-scheme
 
 Laravel (.env) setup
 
