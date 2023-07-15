@@ -4,12 +4,17 @@ React-Laravel-PostgreSQL
 # Run the project by command
 >> php artisan serve --port=8080
 
+Technology going to be implemented on project
+.......................................................................................................
+* Middlewear	* Model Validation
+* Mailer 	* Faker
+
 Modules to run project
 .......................................................................................................
 
 Required Modules (Vendor/node_modules) folder has been uploaded here
 
-https://drive.google.com/file/d/1ot1nVOPiGXmdx_L5L4xT6jIdeIITZltp/view?usp=sharing
+https://drive.google.com/drive/folders/1f25NHV5E0-fpIKvUx9q1MgzB1Fw4Z8bx?usp=sharing
 
 The file contains two separate folders in it
 1. 	vendor: Required for laravel project directory. 

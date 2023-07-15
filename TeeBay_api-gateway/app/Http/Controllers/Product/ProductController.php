@@ -19,9 +19,26 @@ class ProductController extends Controller
     /**
      * Show the form for creating a new resource.
      */
-    public function create()
+    public function create(Request $request)
     {
-        //
+        $effected_count = DB::table('products')->insertOrIgnore([
+                                'name'      => $request->name,
+                                'category'  => $request->category,
+                                'quantity'  => $request->quantity,
+                                'borrowed'  => $request->borrowed,
+                                'created_at'  => date('Y-m-d h:i:s'),
+                                'updated_at'  => date('Y-m-d h:i:s')
+                            ]);
+
+        if ($effected_count==1){
+            $message = 'success';
+        }else{
+            $message = 'error';
+        }
+
+        return response()->json([
+            'message' => $message
+        ]);
     }
 
     /**
