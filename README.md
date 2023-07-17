@@ -1,20 +1,11 @@
 # TeeBay
 React-Laravel-PostgreSQL
 
-# Run the project by command
->> php artisan serve --port=8080
-
-Technology going to be implemented on project
-.......................................................................................................
-* Middlewear	* Model Validation
-* Mailer 	* Faker
-
-Modules to run project
-.......................................................................................................
+# Modules to run project
 
 Required Modules (Vendor/node_modules) folder has been uploaded here
 
-https://drive.google.com/drive/folders/1f25NHV5E0-fpIKvUx9q1MgzB1Fw4Z8bx?usp=sharing
+> https://drive.google.com/drive/folders/1f25NHV5E0-fpIKvUx9q1MgzB1Fw4Z8bx?usp=sharing
 
 The file contains two separate folders in it
 1. 	vendor: Required for laravel project directory. 
@@ -23,14 +14,24 @@ The file contains two separate folders in it
 	Copy node_modules to > TeeBay_Fronts
 
 
-Database to setup
-......................................................................................................
+# Run the project by command
+> php artisan serve --port=8080
 
-Database Type: Postgre SQL
-Database Name: teebay
-Database Backup Directory: TeeBay\TeeBay_other-docs\db-scheme
+# Technology going to be implemented on project
 
-Laravel (.env) setup
+* Middlewear	
+* Model Validation
+* Fortify Mailer 	
+* Faker
+
+
+# Database to setup
+
+Database Type: `Postgre SQL`
+Database Name: `teebay`
+Database Backup Directory: `TeeBay\TeeBay_other-docs\db-scheme`
+
+# Laravel (.env) setup
 
 > DB_CONNECTION=pgsql
 > DB_HOST=127.0.0.1
