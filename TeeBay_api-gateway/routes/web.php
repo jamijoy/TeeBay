@@ -18,6 +18,7 @@ use Illuminate\Support\Facades\Auth;
 //    return view('welcome');
 //});
 
+Auth::routes(['verify' => true]);
 
 Route:: get('/', 'App\Http\Controllers\Home\HomeController@index');
 
@@ -25,6 +26,10 @@ Route:: post('/login', 'App\Http\Controllers\User\UserController@login');
 Route:: post('/register', 'App\Http\Controllers\User\UserController@register');
 
 Route:: get('/users', 'App\Http\Controllers\User\UserController@index');
-Route:: get('/products', 'App\Http\Controllers\Product\ProductController@showAll');
+Route:: get('/products', 'App\Http\Controllers\Product\ProductController@showAll')->middleware('verified');
 Route:: get('/buyProduct/{action}/{id}', 'App\Http\Controllers\Product\ProductController@edit');
 Route:: post('/add-product', 'App\Http\Controllers\Product\ProductController@create');
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

@@ -19,9 +19,9 @@ The file contains two separate folders in it
 
 # Technology going to be implemented on project
 
-* Middlewear	
+* Middlewear	 [Implemented]
 * Model Validation
-* Fortify Mailer 	
+* Fortify Mailer [Implemented]	
 * Faker
 
 
